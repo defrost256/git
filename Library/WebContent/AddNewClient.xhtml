@@ -6,10 +6,9 @@
 
 <h:head></h:head> 
 <h:body> 
-	<h:form>
-		<h:commandButton action="#{PageNavigation.getNextPage(1)}" value="Add New Book"  />
-		<h:commandButton action="#{PageNavigation.getNextPage(2)}" value="Catalog" />
-		<h:commandButton action="#{PageNavigation.getNextPage(3)}" value="Add New Client" />
-	</h:form>
+<h:form>
+	<h:commandButton action="#{PageNavigation.getNextPage(0)}" value="Return to homepage" />
+	<h:commandButton action="#{AddNewClient.AddNewClient()}" value="Add New Client" />
+</h:form>
 </h:body> 
 </html>

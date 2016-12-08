@@ -9,7 +9,6 @@ import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-@DenyAll
 public abstract class AbstractFacade<T>{
 	
 	private Class<T> entityClass;

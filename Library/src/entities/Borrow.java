@@ -2,25 +2,29 @@ package entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 
+@Entity
+@SequenceGenerator(name="borrow_seq", sequenceName="BORROW_SEQ")
 public class Borrow implements Serializable{
 	
 	private static final long serialVersionUID = -1452566269069155842L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.TABLE, generator="borrow_seq")
 	private long Borrow_Id;
 	
-	@OneToMany
+	@OneToOne
 	@JoinColumn(name="ISBN")
 	private Book book;
 	
-	@OneToMany
+	@OneToOne
 	@JoinColumn(name="client_id")
 	private Client client;
 	
