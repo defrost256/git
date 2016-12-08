@@ -7,6 +7,7 @@
 <h:head></h:head> 
 <h:body> 
 	<h:form>
+		<h:commandButton action="#{PageNavigation.getNextPage(0)}" value="Return to homepage" />
 		<h:panelGrid columns="2">
 			<h:outputLabel value="ISBN" />
 			<h:inputText value="#{newBook.ISBN}" />

@@ -16,6 +16,8 @@ public class PageNavigationBean implements Serializable {
 			return "index.xhtml";
 		case 1:
 			return "AddNewBook.xhtml";
+		case 2:
+			return "Catalog.xhtml";
 		default:
 			return "index.xhtml";
 		}
