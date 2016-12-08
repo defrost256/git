@@ -16,6 +16,7 @@ public class AddNewBookBean implements Serializable{
 	private Book newBook;
 	private String Title;
 	private String ISBN;
+	private String output="Ready";
 	
 	@EJB
 	private BookFacade bookFacade;
@@ -30,6 +31,7 @@ public class AddNewBookBean implements Serializable{
 			
 			bookFacade.create(newBook);
 		}
+		setOutput("NewBookAdded " + getISBN() + getTitle());
 	}
 	
 	public String getTitle() {
@@ -46,6 +48,14 @@ public class AddNewBookBean implements Serializable{
 
 	public void setISBN(String iSBN) {
 		ISBN = iSBN;
+	}
+
+	public String getOutput() {
+		return output;
+	}
+
+	public void setOutput(String output) {
+		this.output = output;
 	}
 	
 	
