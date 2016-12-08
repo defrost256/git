@@ -2,11 +2,15 @@ package dal;
 
 import java.util.List;
 
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import entities.Book;
 
+@Stateless
+@LocalBean
 public class BookFacade extends AbstractFacade<Book> {
 
 	@PersistenceContext
