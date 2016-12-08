@@ -30,8 +30,9 @@ public class AddNewBookBean implements Serializable{
 			newBook.setTitle(Title);
 			
 			bookFacade.create(newBook);
+			
+			setOutput("NewBookAdded " + newBook.getISBN() + " " +  newBook.getTitle());
 		}
-		setOutput("NewBookAdded " + getISBN() + getTitle());
 	}
 	
 	public String getTitle() {
