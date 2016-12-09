@@ -7,10 +7,14 @@
 <h:head></h:head> 
 <h:body> 
 	<h:form>
-		<h:commandButton action="#{PageNavigation.getNextPage(1)}" value="Add New Book"  />
-		<h:commandButton action="#{PageNavigation.getNextPage(2)}" value="Catalog" />
-		<h:commandButton action="#{PageNavigation.getNextPage(3)}" value="Add New Client" />
-		<h:commandButton action="#{PageNavigation.getNextPage(4)}" value="Login As Client" />
+		<h:commandButton action="#{PageNavigation.getNextPage(0)}" value="Return to homepage" />
+		<h:dataTable value="#{ClientLogin.clients}" var="client">
+			<h:column>
+				<f:facet name="header">Client ID</f:facet>
+				#{client.client_id}
+			</h:column>
+		</h:dataTable>
+		<h:commandButton action="#{ClientLogin.LoginAsClient()}" value="Login" />
 	</h:form>
 </h:body> 
 </html>
